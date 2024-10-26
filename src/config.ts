@@ -175,6 +175,29 @@ const config: Config = {
         { label: "Body", name: "body", widget: "markdown" },
       ],
     },
+    {
+      "label": "Pages",
+      "name": "pages",
+      "files": [
+        {
+          "label": "Qui sommes nous",
+          "name": "qui-sommes-nous",
+          "file": "content/pages/qui-sommes-nous.yml",
+          "fields": [
+            {
+              "label": "Titre",
+              "name": "title",
+              "widget": "string"
+            },
+            {
+              "label": "Contenu",
+              "name": "content",
+              "widget": "markdown"
+            }
+          ]
+        }
+      ]
+    }
   ],
 };
 
