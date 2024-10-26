@@ -22,6 +22,7 @@ interface PostProps {
   tags: string[];
   author: string;
   description?: string;
+  thumbnail: string;
   source: MDXRemoteSerializeResult;
 }
 
@@ -38,6 +39,7 @@ const getPost = async (slug: string): Promise<PostProps> => {
     description: "",
     tags: data.tags,
     author: data.author,
+    thumbnail: data.thumbnail,
     source: mdxSource,
   };
 };
@@ -49,7 +51,7 @@ export const generateStaticParams = async () => {
 const Post = async ({ params }: { params: { post: string } }) => {
   const slug = params.post;
 
-  const { title, dateString, tags, author, description, source } = await getPost(slug);
+  const { title, dateString, tags, author, description, source, thumbnail } = await getPost(slug);
 
   return (
     <PostLayout
@@ -59,6 +61,7 @@ const Post = async ({ params }: { params: { post: string } }) => {
       tags={tags}
       author={author}
       description={description}
+      thumbnail={thumbnail}
       source={source}
     />
   );
