@@ -137,6 +137,13 @@ const config: Config = {
           time_format: false,
         },
         {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          choose_url: true,
+          default: "/public/images/600x300.png",
+        },
+        {
           label: "Author",
           name: "author",
           widget: "relation",
