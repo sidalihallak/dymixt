@@ -4,14 +4,32 @@ import { useCallback, useState } from 'react';
 import type { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const navbarItems = [
-  { ref: '/', label: 'Home' },
-  { ref: '/about', label: 'About' },
-  { ref: '/projects', label: 'Projects' },
-  { ref: '/team', label: 'Team' },
-  { ref: '/news', label: 'News' },
-  { ref: '/contact', label: 'Contact' },
-];
+const navbarItems =[
+    {
+        "ref": "qui-sommes-nous",
+        "label": "Qui sommes nous?"
+    },
+    {
+        "ref": "notre-encadrement",
+        "label": "Notre encadrement"
+    },
+    {
+        "ref": "nos-activites",
+        "label": "Nos activités"
+    },
+    {
+        "ref": "actualites",
+        "label": "Actualités"
+    },
+    {
+        "ref": "sinscrire",
+        "label": "Nous rejoindre"
+    },
+    {
+        "ref": "contact",
+        "label": "Contacts"
+    }
+]
 
 const StyledNavLink = ({
   isActive,

@@ -30,18 +30,11 @@ const PostList: FC<PostListProps> = ({ posts, tags, pagination }) => {
           current={pagination.current}
           pages={pagination.pages}
           link={{
-            href: (page) => (page === 1 ? "/posts" : "/posts/page/[page]"),
-            as: (page) => (page === 1 ? "" : "/posts/page/" + page),
+            href: (page) => (page === 1 ? "/actualites" : "/actualites/page/[page]"),
+            as: (page) => (page === 1 ? "" : "/actualites/page/" + page),
           }}
         />
       </div>
-      <ul className="hidden md:block">
-        {tags.map((it, i) => (
-          <li key={i} className="mb-3">
-            <TagLink tag={it} />
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
