@@ -25,6 +25,7 @@ export interface PostLayoutProps {
 const PostLayout: FC<PostLayoutProps> = ({ title, date, slug, author, thumbnail, tags, description = "", source }) => {
   const keywords = tags.map((it) => getTag(it)?.name).filter(Boolean);
   const authorName = getAuthor(author)?.name;
+  console.log("source", source)
   return (
     <Layout>
       <JsonLdMeta
